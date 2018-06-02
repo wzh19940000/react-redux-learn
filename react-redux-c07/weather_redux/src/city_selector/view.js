@@ -13,8 +13,9 @@ const CITY_CODES = {
 
 
 class CitySelector extends React.Component {
-  constructor() {
-    super(...arguments);
+  constructor(props) {
+    // super(...arguments);
+    super(props);
 
     this.onChange = this.onChange.bind(this);
   }

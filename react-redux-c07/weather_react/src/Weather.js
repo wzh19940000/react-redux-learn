@@ -1,13 +1,15 @@
 import React from 'react';
 
 //TODO: change to your city code according to http://www.weather.com.cn/
-const cityCode = 101010100;
+const cityCode = 101010200;
 
 class Weather extends React.Component {
   constructor() {
     super(...arguments);
 
-    this.state = {weather: null};
+    this.state = {
+      weather: null
+    };
   }
 
   componentDidMount() {
@@ -18,6 +20,7 @@ class Weather extends React.Component {
       }
 
       response.json().then((responseJson) => {
+        console.log(responseJson)
         this.setState({weather: responseJson.weatherinfo});
       }).catch((error) => {
         this.setState({weather: null});
